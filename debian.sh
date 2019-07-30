@@ -18,6 +18,7 @@ useradd -c "User for che" -d ${APP_HOME} -m -g ${GROUP} -s /bin/bash -u ${UID} $
 echo "%dev ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/dev
 
 # Install gitflow
+cd /opt
 curl -LO https://raw.github.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh
 sh gitflow-installer.sh install stable
 rm gitflow-installer.sh
