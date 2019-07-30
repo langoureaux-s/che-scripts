@@ -13,8 +13,8 @@ apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Create user and group
-addgroup -g ${GID} ${GROUP} && \
-adduser -g "${USER} user" -D -h ${APP_HOME} -G ${GROUP} -s /bin/bash -u ${UID} ${USER} &&\
+addgroup --gid ${GID} ${GROUP} && \
+adduser --home ${APP_HOME} --ingroup ${GROUP} --shell /bin/bash --uid ${UID} ${USER} &&\
 echo "%dev ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/dev
 
 # Install gitflow
