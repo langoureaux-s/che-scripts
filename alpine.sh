@@ -7,7 +7,7 @@ USER=dev
 APP_HOME=/home/dev
 
 # Install extra package
-apk --update add sudo git wget curl ca-certificates iputils zip vim make bash &&\
+apk --update add sudo git wget curl ca-certificates iputils zip vim make bash coreutils &&\
 rm -rf /var/cache/apk/*
 
 # Create user and group
